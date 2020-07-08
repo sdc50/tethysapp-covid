@@ -1,8 +1,9 @@
+# install dependencies
+pip install -e covid-19-dashboard
 # install local package
 pip install -e .
 # configure tethys
 tethys db configure
-tethys db start
 tethys gen portal_config
 tethys settings -s ENABLE_OPEN_PORTAL True
 tethys settings -s ALLOWED_HOSTS "['*']"
