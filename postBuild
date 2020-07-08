@@ -1,5 +1,8 @@
 # install dependencies
-pip install -e covid-19-dashboard
+pwd
+ls
+ls ../
+pip install -e ../covid-19-dashboard
 # install local package
 pip install -e .
 # configure tethys
