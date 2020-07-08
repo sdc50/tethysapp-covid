@@ -1,8 +1,9 @@
 # install dependencies
-pwd
-ls
-ls ../
-pip install -e ../covid-19-dashboard
+git clone https://github.com/sdc50/covid-19-dashboard.git
+cd covid-19-dashboard
+git clone https://github.com/CSSEGISandData/COVID-19.git
+pip install -e .
+cd ..
 # install local package
 pip install -e .
 # configure tethys
