@@ -1,0 +1,15 @@
+# install local package
+pip install -e .
+# configure tethys
+tethys db configure
+tethys db start
+tethys gen portal_config
+tethys settings -s ENABLE_OPEN_PORTAL True
+tethys settings -s ALLOWED_HOSTS "['*']"
+# enable jupyter_server_proxy
+jupyter serverextension enable --sys-prefix jupyter_server_proxy
+# install the tethys server extension so that
+# tethys launches at startup
+mv tethysserverextension.py ${NB_PYTHON_PREFIX}/lib/python*/site-packages/
+# enable bokeh extension
+jupyter serverextension enable --sys-prefix tethysserverextension

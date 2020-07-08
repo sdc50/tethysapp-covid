@@ -1,0 +1,17 @@
+name: covid-19-tethys
+
+channels:
+  - pyviz
+  - tethysplatform/label/dev
+  - conda-forge
+
+dependencies:
+  - tethys-platform
+  - panel
+  - param
+  - holoviews>=1.13.3
+  - xarray
+  - pyproj
+  - pip
+  - pip:
+    - jupyter-server-proxy
